@@ -1,0 +1,12 @@
+- hosts: localhost
+#  gather_facts: no
+  tasks:
+    - name: say hi
+      tags: foo
+      shell: echo "beginning root_playbook.yml"
+
+    - name: install docker
+      import_tasks: docker_install_role.yml
+    # - name: install flask
+    #  import_tasks: flask_install_role.yml
+#- include: users_playbook.yml
